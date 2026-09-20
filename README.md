@@ -1,0 +1,43 @@
+# K&S Coverwerk · 小老鼠炼金工房
+
+Kirkland & Sunshine 的封面生成器。纯前端，单文件，无后端，无构建步骤。
+
+## 功能
+
+- 开本：A5 / B5 / A6 / B6（ISO 216）
+- 书脊：页数 ÷ 2 × 单张厚度 + 补偿。道林 80g = 0.10 mm，100g = 0.12 mm（参考值，可改）
+- 无书脊单面封面
+- 勒口：前 / 后各自可选，默认 60 mm，可填色或放图（自动裁剪在勒口内）
+- 装订方向：左翻 / 右翻
+- 文字：自由拖动、缩放、旋转、横排 / 竖排、描边
+- 字体：30 种，全部 SIL OFL 1.1，经 Google Fonts 加载
+- 图层：图片 / 文字 / 色块，16 种混合模式，可裁剪到任一分区
+- 滤镜：色温、色调、曝光、对比度、高光、阴影、饱和度、曲线（RGB + 分通道）
+- 导出：PNG（写入 DPI 信息）/ PDF，150 / 300 / 400 dpi，出血可开关
+
+## 部署到 GitHub Pages
+
+仓库名不能含 `&`，建议 `ks-coverwerk`。
+
+```bash
+git init
+git add index.html README.md
+git commit -m "K&S Coverwerk v1"
+git branch -M main
+git remote add origin git@github.com:<你的用户名>/ks-coverwerk.git
+git push -u origin main
+```
+
+然后：仓库 Settings → Pages → Source 选 `main` / `/ (root)`。
+地址为 `https://<你的用户名>.github.io/ks-coverwerk/`。
+
+## 依赖（运行时从 CDN 加载）
+
+- jsPDF 2.5.1（cdnjs）— 仅 PDF 导出使用
+- Google Fonts — 字体
+
+## 已知限制
+
+- 导出为 RGB，无 CMYK
+- 无工程保存，刷新即丢失
+- 日文字体缺部分简体字，缺字回退到思源黑体
