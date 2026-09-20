@@ -15,22 +15,6 @@ Kirkland & Sunshine 的封面生成器。纯前端，单文件，无后端，无
 - 滤镜：色温、色调、曝光、对比度、高光、阴影、饱和度、曲线（RGB + 分通道）
 - 导出：PNG（写入 DPI 信息）/ PDF，150 / 300 / 400 dpi，出血可开关
 
-## 部署到 GitHub Pages
-
-仓库名不能含 `&`，建议 `ks-coverwerk`。
-
-```bash
-git init
-git add index.html README.md
-git commit -m "K&S Coverwerk v1"
-git branch -M main
-git remote add origin git@github.com:<你的用户名>/ks-coverwerk.git
-git push -u origin main
-```
-
-然后：仓库 Settings → Pages → Source 选 `main` / `/ (root)`。
-地址为 `https://<你的用户名>.github.io/ks-coverwerk/`。
-
 ## 依赖（运行时从 CDN 加载）
 
 - jsPDF 2.5.1（cdnjs）— 仅 PDF 导出使用
