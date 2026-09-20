@@ -1,6 +1,6 @@
 # K&S Coverwerk · 小老鼠炼金工房
 
-Kirkland & Sunshine 的封面生成器。纯前端，单文件，无后端，无构建步骤。
+Kirkland & Sunshine 的封面生成器。
 
 ## 功能
 
