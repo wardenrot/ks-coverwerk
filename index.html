@@ -1096,6 +1096,8 @@ function sample(){
   addText({text:'这里放简介、目录或一句话。\n封底留白，也是一种设计。',font:'Noto Serif SC',weight:400,size:10,x:b.cx,y:g.docH/2,lh:1.9,ls:0.08,color:'#14151a'});
   ensureCredit();sel=null;
 }
+/* handoff from K&S Pulpwerk: ?pages=152&size=A5&bind=right */
+try{const q=new URLSearchParams(location.search),n=parseInt(q.get('pages'));if(n>=4&&n<=2000)book.pages=n;if(SIZES[q.get('size')])book.size=q.get('size');if(q.get('bind')==='left'||q.get('bind')==='right')book.bind=q.get('bind');}catch(_){}
 syncBook();sample();renderLayers();renderProps();fit();commit();
 })();
 </script>
